@@ -1,25 +1,36 @@
 # Contributing to KhmBXi
 
-Thanks for taking an interest in KhmBXi. The project is at an early stage, and its implementation and supported use cases are still being established.
+Thanks for your interest in KhmBXi. The project is an early prototype, so please check the current implementation and roadmap before proposing a large change.
 
 ## Before you start
 
-- For a bug, first check whether the behavior is part of the code currently in the repository. The initial repository setup does not yet contain application code.
-- For a feature or substantial change, open an issue to discuss the problem and intended outcome before writing a large patch. Please describe the user need and alternatives you considered.
+- Open an issue before substantial work so the intended behavior can be discussed.
 - For a possible security vulnerability, follow [SECURITY.md](SECURITY.md). Do not report it in a public issue.
+- Do not include `.env.local`, credentials, private site archives, or generated upload data in a pull request.
+
+## Local setup
+
+Follow the setup steps in [README.md](README.md). In short, install dependencies with `npm ci`, create `.env.local` from `.env.example`, add your own Clerk development keys, then run `npm run dev`.
+
+Before opening a pull request, run the available checks when possible:
+
+```powershell
+npm run lint
+npm run build
+```
+
+There is no automated test script configured yet. In your pull request, list the checks you ran and their results, or say why you could not run them.
 
 ## Pull requests
 
-Please keep each pull request focused and include:
+Please keep each change focused and include:
 
-- A short explanation of the problem and the proposed change.
-- A link to the related issue, when there is one.
+- A short explanation of the problem and proposed change.
+- A link to a related issue, when there is one.
 - Documentation updates when behavior or setup instructions change.
-- The checks you ran and their results. If checks are unavailable, say so rather than guessing at commands.
+- Any relevant limitations or follow-up work.
 
 Do not include credentials, private data, or unrelated formatting changes. Be respectful and follow the [Code of Conduct](CODE_OF_CONDUCT.md).
-
-There are no application setup or test commands yet. Once source code and repeatable checks are added, this guide and the README will be updated with the verified commands.
 
 ## Review
 
